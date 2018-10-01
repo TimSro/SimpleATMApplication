@@ -14,4 +14,8 @@ public class MyUsers {
 
     @Column(nullable = false)
     private String password;
+    
+    public long getId() {
+        return id;
+    }
 }
