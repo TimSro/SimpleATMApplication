@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="consoleAppender" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d %-5p [%t] %c{1.} - %m%n" />
+    </Console>
+    <RollingFile name="centralLogAppender">
+      <FileName>lf.log</FileName>
+      <FilePattern>lf-%i.log</FilePattern>
+      <PatternLayout pattern="%d %-5p [%t] %c{1.} - %m%n" />
+      <Policies>
+        <SizeBasedTriggeringPolicy size="50 MB"/>
+      </Policies>
+      <DefaultRolloverStrategy max="5" />
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Logger name="de.tz.helloweb.logging" level="TRACE" additivity="false">
+      <AppenderRef ref="STDOUT" />
+    </Logger>
+    <Root level="TRACE">
+      <AppenderRef ref="STDOUT" />
+    </Root>
+  </Loggers>
+</Configuration>
