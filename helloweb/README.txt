@@ -1,1 +1,1 @@
-Just a README
+A project for learning purpose.
