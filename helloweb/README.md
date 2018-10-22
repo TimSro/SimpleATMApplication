@@ -1,4 +1,4 @@
-## Project title
+## SimpleATMApplication
 A simple application for a "build it, break it, fix it".
 
 ## Motivation
