@@ -5,7 +5,7 @@
       <PatternLayout pattern="%d %-5p [%t] %c{1.} - %m%n" />
     </Console>
     <RollingFile name="centralLogAppender">
-      <FileName>lf.log</FileName>
+      <FileName>my.log</FileName>
       <FilePattern>lf-%i.log</FilePattern>
       <PatternLayout pattern="%d %-5p [%t] %c{1.} - %m%n" />
       <Policies>
