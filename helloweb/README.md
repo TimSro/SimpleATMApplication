@@ -19,10 +19,8 @@ If you're using any code style like xo, standard etc. That will help others whil
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Spring.
-
 <b>Built with</b>
-- [Electron](https://electron.atom.io)
+- [Spring](https://spring.io)
 
 ## Features
 Nothing.
