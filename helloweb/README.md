@@ -1,8 +1,8 @@
 ## Project title
-A little info about your project and/ or overview that explains **what** the project is about.
+A simple application for a "build it, break it, fix it".
 
 ## Motivation
-A simple application for a "build it, break it, fix it".
+Learning purpose.
 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
