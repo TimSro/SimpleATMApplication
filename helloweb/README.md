@@ -49,6 +49,6 @@ Let people know how they can contribute into your project. A [contributing guide
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
+GPL.
 
 MIT © [TimSro]()
