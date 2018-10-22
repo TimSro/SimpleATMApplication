@@ -18,5 +18,18 @@ public class MyBank {
     
     @Column(nullable = false)
     private String creditline;
+
+	public long getId() {
+		return id;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public String getCreditline() {
+		return creditline;
+	}
     
 }
