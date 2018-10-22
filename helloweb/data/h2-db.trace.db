@@ -1,0 +1,4 @@
+2018-10-22 14:04:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "ALTER TABLE H2-[*]DB.PUBLIC.MY_USERS ADD COLUMN ROLE INTEGER NOT NULL "; erwartet "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"
+Syntax error in SQL statement "ALTER TABLE H2-[*]DB.PUBLIC.MY_USERS ADD COLUMN ROLE INTEGER NOT NULL "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+alter table H2-DB.PUBLIC.MY_USERS add column role integer not null [42001-197]
