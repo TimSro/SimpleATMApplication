@@ -21,6 +21,8 @@ Include logo/demo screenshot etc.
 ## Tech/framework used
 <b>Built with</b>
 - [Spring](https://spring.io)
+- Log4j
+- H2
 
 ## Features
 Nothing.
