@@ -2,7 +2,7 @@
 A little info about your project and/ or overview that explains **what** the project is about.
 
 ## Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+A simple application for a "build it, break it, fix it".
 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
@@ -19,13 +19,13 @@ If you're using any code style like xo, standard etc. That will help others whil
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Ex. -
+Spring.
 
 <b>Built with</b>
 - [Electron](https://electron.atom.io)
 
 ## Features
-What makes your project stand out?
+Nothing.
 
 ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
