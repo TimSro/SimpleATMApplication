@@ -34,6 +34,16 @@ public class LoggingAspect {
     @Pointcut("@args(de.tz.helloweb.logging.Entity)")
     public void methodsAcceptingEntities() {
     }
+    
+    @Pointcut("@args(de.tz.helloweb.logging.LogTransaction)")
+    public void logTransactions() {
+    }
+
+    @Before("logTransactions()")
+    public void logTransaction(JoinPoint jp) {
+        jp.getSignature().getModifiers();
+        logger.info("transacted");
+    }
 
     @Before("repositoryMethods()")
     public void logMethodCall(JoinPoint jp) {
