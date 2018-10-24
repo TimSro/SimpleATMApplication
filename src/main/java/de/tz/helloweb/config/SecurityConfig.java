@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -35,9 +36,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
             .logout()
             .permitAll();
-
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
+        
+        // https
+//        http.requiresChannel()
+//        .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+//        .requiresSecure();
+//
+//        // lieber an als aus
+//        // http.csrf().disable();
+//        http
+//        .csrf()
+//            .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+//        http.headers().frameOptions().disable();
+//        // hier noch richtige scripts etc angeben
+//        http.headers()
+//        .contentSecurityPolicy("script-src 'self'");
     }
 
     @Bean
