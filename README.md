@@ -20,6 +20,7 @@ Include logo/demo screenshot etc.
 - [Spring](https://spring.io)
 - Log4j
 - H2
+- JDK 8
 
 ## Features
 Nothing.
