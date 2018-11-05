@@ -73,3 +73,8 @@ Wie leicht lässt es sich Bruteforcen?
 
 WebScarab und OWASP ZAP können verwendet werden.
 
+**Testing for Vulnerable Remember Password**
+Passwörter in Cookies gespeichert (Klartext oder Gehashed)?
+Wlecher Hashalgorithmus?
+Credentials nur beim Login geschickt und nicht bei jedem Request?
+
