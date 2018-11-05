@@ -7,12 +7,14 @@ https://www.owasp.org/index.php/Testing_Identity_Management
 
 
 **Test Role Definitions**
+
 Kann ich als User auf eine Adminseite zugreifen, oder wird das verhindert?
 
 Manuell, ein Spideringtool hilft aber.
 
 
 **Test User Registration Process**
+
 Wird die Identität überprüft und wenn ja wie?
 Kann eine Identität sich mehrmals registrieren?
 Kann man sich für Rollen oder Berechtigungen anmelden?
@@ -23,6 +25,7 @@ Manuell
 
 
 **Test Account Provisioning Process**
+
 Gibt es eine Verifikation fürs erstellen/ entfernen von Accounts?
 Kann ein Admin oder User Accounts mit Rechten erstellen, die über den eigenen liegen?
 Was passiert mit den Files von entfernten Usern?
@@ -31,6 +34,7 @@ Manuell
 
 
 **Testing for Account Enumeration and Guessable User Account**
+
 Eingeben von existentem Username/ passendem Passwort, existentem Usernamen/ flaschem Passwort und nicht existentem Username.
 Die HTTP Responses werden dann untersucht, ob man anhand dieser existente User herrausfinden kann.
 Außerdem können Fehlerseiten, Webpagetitles und URLs Hinweise auf die Existenz der User enthalten.
@@ -42,6 +46,7 @@ Der Webscarab hilft die HTTP Responses anzuschauen.*
 
 
 **Testing for Weak or unenforced username policy**
+
 Gibt es eine Struktur für Usernames?
 Unterschiedliche Fehlermeldungen für gültige und ungültoge Usernames?
 
