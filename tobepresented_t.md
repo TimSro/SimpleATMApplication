@@ -1,7 +1,7 @@
 ## Presentation Tim:
 
 
-### 4.4 Testing for Identity Management**
+### 4.4 Testing for Identity Management
 
 https://www.owasp.org/index.php/Testing_Identity_Management
 
@@ -38,7 +38,7 @@ Außerdem können Fehlerseiten, Webpagetitles und URLs Hinweise auf die Existenz
 Manchmal werden User IDs nach Policies erzeugt.  
 Das ermöglicht das automatisierte Testen mit zum Beispiel Perl.  
 
-Der Webscarab hilft die HTTP Responses anzuschauen.*
+Der Webscarab hilft die HTTP Responses anzuschauen.
 
 
 **Testing for Weak or unenforced username policy**  
@@ -53,4 +53,23 @@ Man kann ein Username Dictionary verwenden.
 
 https://www.owasp.org/index.php/Testing_for_authentication
 
+**Testing for Credentials Transported over an Encrypted Channel**  
+Hier wird mit einem Webproxy untersucht, ob Username und Password mit in den HTTP Body oder mit in der URL gesendet werden.   
+
+Hierfür können z.B. der Webscarab oder der OWASP ZAP verwendet werden.  
+
+**Testing for default credentials**  
+Wenn die verwendete Technologie bekannt ist, kann auf default Credentials getestet werden.  
+Außerdem sollte man verbreitete Varianten wie z.B. admin, administrator, root, qa, test, system, guest, operator, oder super testen.  
+Als Passwörter bieten sich password, pass123, password123, admin, oder guest an.  
+
+Neue Accounts könnten mit Defaultpasswörtern erstellt werden, die einem bestimmten Muster folgen.  
+
+**Testing for Weak lock out mechanism**  
+Ab wie vielen Fehlerhaften Eingaben greift der Lockoutmechanismus und wie lange dauert dieser?  
+Wie leicht lässt es sich Bruteforcen?  
+
+**Testing for Bypassing Authentication Schema**  
+
+WebScarab und OWASP ZAP können verwendet werden.
 
