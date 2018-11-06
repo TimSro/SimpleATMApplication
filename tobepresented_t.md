@@ -143,7 +143,3 @@ Zum Beispiel könnte man zu so einem Ergebnis kommen:
 
 ***[Source](https://www.owasp.org/images/1/19/OTGv4.pdf)***
 
-## Tools
-
-### OWASP ZAP
-
