@@ -1,4 +1,4 @@
-# Testting for Identity Management and Authentication Testing:
+# Testing for Identity Management and Authentication Testing:
 
 ## 4.4 [Testing for Identity Management](https://www.owasp.org/index.php/Testing_Identity_Management)
 
@@ -34,7 +34,6 @@ Unterschiedliche Fehlermeldungen für gültige und ungültoge Usernames?
 Man kann ein Username Dictionary verwenden.
 
 
-
 ## 4.5 [Authentication Testing](https://www.owasp.org/index.php/Testing_for_authentication)
 
 
@@ -57,6 +56,30 @@ Wie leicht lässt es sich Bruteforcen?
 
 ### Testing for Bypassing Authentication Schema   
 
+**Direct page request**  
+Wenn es die Zugriffskontrolle nur auf der Login Page gibt, können die Seiten dahinter einfach direkt aufgerufen werden.  
+Ein Login und somit eine Authentifikation sind also nicht nötig.
+```
+http://www.site.com/users/Administrator
+```  
+
+**Parameter Modification**  
+Wenn die Authentifizierung über einen fixen Parameter geregelt wird kann man diesen in der URL, einem POST oder in einem Cookie umsetzen.  
+
+Hier muss z.B. in der URL authenticated einfach nur auf yes gesetzt werden: 
+```
+http://www.site.com/page.asp?authenticated=no 
+```
+
+**Session ID Prediction**  
+Oft werden Session IDs verwendet um die Authentifikation zu managen.  
+Wenn diese Session ID vorhersehbar kann eine gültige Session ID gefunden werden
+
+**[SQL Injection](https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005))**  
+SQL Injection wird erst unter [Testing for Input Validation](https://www.owasp.org/index.php/Testing_for_Input_Validation) behandelt.  
+Hier ist allerdings zu erwähnen, dass SQL Injection die Umgehung der Authentifikation ermöglichen kann.  
+
+
 *Tools*: [Webscarab](https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project)
  und [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)  
 
@@ -68,16 +91,19 @@ Credentials nur beim Login geschickt und nicht bei jedem Request?
 ### Testing for Browser cache weakness   
 Jede Seite die sensitive Daten enthält sollte im Browser keine Daten cashen.  
 Hier den HTTP response header untersuchen:  
+```
 Cache-Control: no-cache, no-store; Expires: 0; Pragma: no-cache  
-
+```
 Gut zusätzlich dazu sind auch noch:  
+```
 Cache-Control: must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0  
+```  
 
 *Tools:* [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)  
 
 ### Testing for Weak password policy  
 Wie muss ein Passwort mindestens aussehen, welche Zeichen sind verboten?  
-Wann muss das Passwort gewechselt werden? ---> Note: ist häufig nicht eigentlich schlecht, da Passwörter dadurch eher unsicherer werden?  
+Wann muss das Passwort gewechselt werden? 
 Wie oft kann das Passwort wiederverwendet werden?  
 Wie unterschiedlich muss das neue Passwort vom alten sein?  
 Kann der User andere Accountinformationen als Passwort verwenden, wie z.B. seinen Username?  
@@ -105,6 +131,8 @@ Welche anderen Kanäle gibt es zur Authentifikation?
 Was kann über diese Kanäle gemacht werden?  
 Gibt es dort eine schwächere Überprüfung der Konformität?  
 
+Zum Beispiel könnte man zu so einem Ergebnis kommen:  
+
 | Website        | Mobile          | Callcenter |
 | -------------- |:---------------:| ----------:|
 | Register       | Yes             | -          |
@@ -114,3 +142,8 @@ Gibt es dort eine schwächere Überprüfung der Konformität?
 | -              | Change password |-           |
 
 ***[Source](https://www.owasp.org/images/1/19/OTGv4.pdf)***
+
+## Tools
+
+### OWASP ZAP
+
