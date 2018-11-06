@@ -105,4 +105,12 @@ Welche anderen Kanäle gibt es zur Authentifikation?
 Was kann über diese Kanäle gemacht werden?  
 Gibt es dort eine schwächere Überprüfung der Konformität?  
 
+| Website        | Mobile          | Callcenter |
+| -------------- |:---------------:| ----------:|
+| Register       | Yes             | -          |
+| Log in         | Yes             | Yes        |
+| Log out        | -               | -          |
+| Reset password | Yes             | Yes        |
+| -              | Change password |-           |
+
 ***[Source](https://www.owasp.org/images/1/19/OTGv4.pdf)***
